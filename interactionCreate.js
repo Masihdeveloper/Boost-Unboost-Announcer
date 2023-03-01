@@ -4,7 +4,7 @@ module.exports = {
 
   async execute(interaction) {
     if (interaction.isButton()) {
-      if (interaction.customId === "Couple GIF") {
+      if (interaction.customId === "Total Boosters") {
         const TotalBoosters = await interaction.guild.members.fetch().then(
           (members) =>
             members
