@@ -1,7 +1,7 @@
 /* 
 Advanced Boost Announce System in Discord.js V14
 Hope you Enjoy, Made with 💜 by Masih#0258
-Github: https://github.com/Masihdev1 | Don't forget to ⭐
+Github: https://github.com/MasihJs | Don't forget to ⭐
 Website: https://masihdev.tk/
 Copyright Masih 2024 All Right Reserved!
 */
@@ -18,17 +18,11 @@ module.exports = {
 
     // All Definitions
 
-    const BoostAnnounceChannel = client.channels.cache.get(
-      "Your-Channel-ID"
-    );
+    const BoostAnnounceChannel = client.channels.cache.get("Your-Channel-ID");
 
-    const BoostAnnouceLogChannel = client.channels.cache.get(
-      "Your-Channel-ID"
-    );
+    const BoostAnnouceLogChannel = client.channels.cache.get("Your-Channel-ID");
 
-    const NitroBoostRole = newMember.guild.roles.cache.get(
-      "Your-BoostRole-ID"
-    );
+    const NitroBoostRole = newMember.guild.roles.cache.get("Your-BoostRole-ID");
 
     const format = {
       0: "No Level",
@@ -119,8 +113,10 @@ module.exports = {
             {
               name: "🎉 Server Boost at:",
               value: `<t:${Math.round(
-                msg.createdTimestamp / 1000
-              )}:f> | <t:${Math.round(msg.createdTimestamp / 1000)}:R>`,
+                newMember.premiumSinceTimestamp / 1000
+              )}:f> | <t:${Math.round(
+                newMember.premiumSinceTimestamp / 1000
+              )}:R>`,
               inline: true,
             },
             {
