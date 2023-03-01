@@ -58,8 +58,8 @@ module.exports = {
             `> <@${newMember.user.id}>, You Are Awsome And Amazing.\n\n> Thanks For Boost The Server\n> Enjoy Your ${NitroBoostRole} and Other Exclusive Perks!`
           )
           .addFields({
-            name: "> 💎 Total Boosters:",
-            value: `${newMember.guild.premiumSubscriptionCount} Boosters | ${BoostLevel}`,
+            name: "> 💎 Total Boost:",
+            value: `${newMember.guild.premiumSubscriptionCount} Boost | ${BoostLevel}`,
             inline: false,
           })
           .setImage(
@@ -136,8 +136,8 @@ module.exports = {
               inline: true,
             },
             {
-              name: "💜 Total Boosters",
-              value: `${newMember.guild.premiumSubscriptionCount} Boosters | ${BoostLevel}`,
+              name: "💜 Total Boost",
+              value: `${newMember.guild.premiumSubscriptionCount} Boost | ${BoostLevel}`,
               inline: false,
             },
             {
@@ -202,8 +202,8 @@ module.exports = {
           },
 
           {
-            name: "💜 Total Boosters:",
-            value: `${newMember.guild.premiumSubscriptionCount} Boosters | ${BoostLevel}`,
+            name: "💜 Total Boost:",
+            value: `${newMember.guild.premiumSubscriptionCount} Boost | ${BoostLevel}`,
             inline: false,
           },
 
