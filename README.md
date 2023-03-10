@@ -17,5 +17,5 @@ If you don't have a Event Handler and ran into a problem while running simply yo
 
 That i can help you or provide a **No Event Handler Verison** Of this source, Just you need to paste it in your main file with the same output!
 
-**⚠️Before run this src make sure that your Bot have access to guilds and guild members in client definition in intents, Otherwise the guildMemberUpdate Event may not worked**
+**⚠️Before run this src make sure that your Bot have access to guilds and guild members in client definition in intents, Otherwise the guildMemberUpdate Event may not worked!**
  
