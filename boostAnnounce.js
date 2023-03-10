@@ -22,8 +22,6 @@ module.exports = {
 
     const BoostAnnouceLogChannel = client.channels.cache.get("Your-Channel-ID");
 
-    const NitroBoostRole = newMember.guild.roles.cache.get("Your-BoostRole-ID");
-
     const format = {
       0: "No Level",
       1: "Level 1",
@@ -46,8 +44,8 @@ module.exports = {
 
     if (!oldMember.roles.cache.size !== newMember.roles.cache.size) {
       if (
-        !oldMember.roles.cache.has(NitroBoostRole.id) &&
-        newMember.roles.cache.has(NitroBoostRole.id)
+        !oldMember.roles.cache.has(newMember.guild.roles.premiumSubscriberRole.id) &&
+        newMember.roles.cache.has(newMember.guild.roles.premiumSubscriberRole.id)
       ) {
         const BoostAnnounceEmbed = new EmbedBuilder()
           .setAuthor({
@@ -55,7 +53,7 @@ module.exports = {
             iconURL: newMember.guild.iconURL({ dynamic: true }),
           })
           .setDescription(
-            `> <@${newMember.user.id}>, You Are Awsome And Amazing.\n\n> Thanks For Boost The Server\n> Enjoy Your ${NitroBoostRole} and Other Exclusive Perks!`
+            `> <@${newMember.user.id}>, You Are Awsome And Amazing.\n\n> Thanks For Boost The Server\n> Enjoy Your ${newMember.guild.roles.premiumSubscriberRole} and Other Exclusive Perks!`
           )
           .addFields({
             name: "> 💎 Total Boost:",
@@ -95,7 +93,7 @@ module.exports = {
 
         //Send DM to NEW Nitro Booster
         newMember.send({
-          content: `Hello ${newMember.user.tag} You are Awesome, Thanks For Boost The **__${newMember.guild.name}__** Server\nSo Enjoy Your **${NitroBoostRole.name}** Role And Other Massive Perks🎉`,
+          content: `Hello ${newMember.user.tag} You are Awesome, Thanks For Boost The **__${newMember.guild.name}__** Server\nSo Enjoy Your **${newMember.guild.roles.premiumSubscriberRole.name}** Role And Other Massive Perks🎉`,
           components: [BoostAnnounceRow],
         });
 
@@ -142,7 +140,7 @@ module.exports = {
             },
             {
               name: "✅ Assigned Role:",
-              value: `${NitroBoostRole} | ${NitroBoostRole.name} | ${NitroBoostRole.id}`,
+              value: `${newMember.guild.roles.premiumSubscriberRole} | ${newMember.guild.roles.premiumSubscriberRole.name} | ${newMember.guild.roles.premiumSubscriberRole.id}`,
               inline: false,
             }
           )
@@ -170,8 +168,8 @@ module.exports = {
     }
     //Trigger when Member Unboost the server and remove the Nitro Booster Role
     if (
-      oldMember.roles.cache.has(NitroBoostRole.id) &&
-      !newMember.roles.cache.has(NitroBoostRole.id)
+      oldMember.roles.cache.has(oldMember.guild.roles.premiumSubscriberRole.id) &&
+      !newMember.roles.cache.has(oldMember.guild.roles.premiumSubscriberRole.id)
     ) {
       const UnboostEmbedLog = new EmbedBuilder()
         .setAuthor({
@@ -196,20 +194,20 @@ module.exports = {
           {
             name: "📆 Joined Server at:",
             value: `<t:${Math.round(
-              newMember.joinedTimestamp / 1000
-            )}:f> | <t:${Math.round(newMember.joinedTimestamp / 1000)}:R>`,
+              oldMember.joinedTimestamp / 1000
+            )}:f> | <t:${Math.round(oldMember.joinedTimestamp / 1000)}:R>`,
             inline: true,
           },
 
           {
             name: "💜 Total Boost:",
-            value: `${newMember.guild.premiumSubscriptionCount} Boost | ${BoostLevel}`,
+            value: `${oldMember.guild.premiumSubscriptionCount} Boost | ${BoostLevel}`,
             inline: false,
           },
 
           {
             name: "❌ Removed Role:",
-            value: `${NitroBoostRole} | ${NitroBoostRole.name} | ${NitroBoostRole.id}`,
+            value: `${oldMember.guild.roles.premiumSubscriberRole} | ${oldMember.guild.roles.premiumSubscriberRole.name} | ${oldMember.guild.roles.premiumSubscriberRole.id}`,
             inline: false,
           }
         )
@@ -239,7 +237,7 @@ module.exports = {
 
       //Send DM to NEW UnBooster
       oldMember.send({
-        content: `> **Message Form Boost Detection System**\n\n> Hello ${oldMember.user.tag}, Unfortunately Your Nitro Boost For **${oldMember.guild.name}** Server Has Been Expired And You Lose Your Special And Cool Perks And Exclusive **${NitroBoostRole.name}** Role :'(\n\n> 🎉By Boosting Again You Can Get This Perks Back!`,
+        content: `> **Message Form Boost Detection System**\n\n> Hello ${oldMember.user.tag}, Unfortunately Your Nitro Boost For **__${oldMember.guild.name}__** Server Has Been Expired And You Lose Your Special And Cool Perks And Exclusive **${oldMember.guild.roles.premiumSubscriberRole.name}** Role :'(\n\n> 🎉By Boosting Again You Can Get This Perks Back!`,
         components: [TotalBoosterRow],
       });
     }
@@ -252,6 +250,5 @@ module.exports = {
 
 /*
 Event Handler
-NOTE: You must add your real Nitro Boost role ID in line: 29 
 If you get problem while run this src simply you can connect me in DM!
 */
