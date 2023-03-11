@@ -18,9 +18,9 @@ module.exports = {
 
     // All Definitions
 
-    const BoostAnnounceChannel = client.channels.cache.get("Your-Channel-ID");
+    const BoostAnnounceChannel = client.channels.cache.get("CHANNEL_ID");
 
-    const BoostAnnouceLogChannel = client.channels.cache.get("Your-Channel-ID");
+    const BoostAnnouceLogChannel = client.channels.cache.get("LOG_CHANNEL_ID");
 
     const format = {
       0: "No Level",
