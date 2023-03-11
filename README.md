@@ -6,10 +6,6 @@ For install all required packages
 ```
 node . 
 ```
-Or
-```
-node index.js
-```
 
 Run your project and enjoy
 
