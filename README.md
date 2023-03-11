@@ -1,3 +1,5 @@
+Don't Forget to fill `CHANNEL_ID` and `LOG_CHANNEL_ID` by your information in the 
+
 install all required packages:
 
 ```
