@@ -16,4 +16,4 @@ That i can help you or provide a **No Event Handler Verison** Of this source, Ju
 
 **⚠️Before run this src make sure that your Bot have access to guilds and guild members in client definition in intents, Otherwise the guildMemberUpdate Event may not worked!**
  
- Copyright (c): Masih 2023/03/01
+ Copyright (c): Masih 2023/03/01v
