@@ -1,6 +1,6 @@
 Don't Forget to fill `CHANNEL_ID` and `LOG_CHANNEL_ID` by your information in the 21st and 23rd line
 
-Install all required packages:
+Install all required packages
 
 ```
 npm install
