@@ -6,21 +6,27 @@ Website: https://masihdev.tk/
 Copyright Masih 2024 All Right Reserved!
 */
 
+const {
+  EmbedBuilder,
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
+} = require("discord.js");
+
+const config = require("./config.json");
+
 module.exports = {
   name: "guildMemberUpdate",
   async execute(oldMember, newMember, client) {
-    const {
-      EmbedBuilder,
-      ActionRowBuilder,
-      ButtonBuilder,
-      ButtonStyle,
-    } = require("discord.js");
-
     // All Definitions
 
-    const BoostAnnounceChannel = client.channels.cache.get("CHANNEL_ID");
+    const BoostAnnounceChannel = client.channels.cache.get(
+      config.boostChannelId
+    );
 
-    const BoostAnnouceLogChannel = client.channels.cache.get("LOG_CHANNEL_ID");
+    const BoostAnnouceLogChannel = client.channels.cache.get(
+      config.boostLogChannelId
+    );
 
     const format = {
       0: "No Level",
@@ -44,8 +50,12 @@ module.exports = {
 
     if (!oldMember.roles.cache.size !== newMember.roles.cache.size) {
       if (
-        !oldMember.roles.cache.has(newMember.guild.roles.premiumSubscriberRole.id) &&
-        newMember.roles.cache.has(newMember.guild.roles.premiumSubscriberRole.id)
+        !oldMember.roles.cache.has(
+          newMember.guild.roles.premiumSubscriberRole.id
+        ) &&
+        newMember.roles.cache.has(
+          newMember.guild.roles.premiumSubscriberRole.id
+        )
       ) {
         const BoostAnnounceEmbed = new EmbedBuilder()
           .setAuthor({
@@ -168,7 +178,9 @@ module.exports = {
     }
     //Trigger when Member Unboost the server and remove the Nitro Booster Role
     if (
-      oldMember.roles.cache.has(oldMember.guild.roles.premiumSubscriberRole.id) &&
+      oldMember.roles.cache.has(
+        oldMember.guild.roles.premiumSubscriberRole.id
+      ) &&
       !newMember.roles.cache.has(oldMember.guild.roles.premiumSubscriberRole.id)
     ) {
       const UnboostEmbedLog = new EmbedBuilder()
