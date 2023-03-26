@@ -1,4 +1,4 @@
-Don't Forget to fill `CHANNEL_ID` and `LOG_CHANNEL_ID` by your information in the 21st and 23rd line
+Don't Forget to fill `boostChannelId` and `boostLogChannelId` by your information in the config.json file
 
 Install all required packages:
 
