@@ -60,7 +60,7 @@ module.exports = {
         const BoostAnnounceEmbed = new EmbedBuilder()
           .setAuthor({
             name: `🎉🎉 BOOSTER PARTY 🎉🎉`,
-            iconURL: newMember.guild.iconURL({ dynamic: true }),
+            iconURL: newMember.guild.iconURL({ size: 1024 }),
           })
           .setDescription(
             `> <@${newMember.user.id}>, You Are Awsome And Amazing.\n\n> Thanks For Boost The Server\n> Enjoy Your ${newMember.guild.roles.premiumSubscriberRole} and Other Exclusive Perks!`
