@@ -5,7 +5,7 @@ module.exports = {
   async execute(interaction) {
     if (interaction.isButton()) {
       if (interaction.customId === "Total Boosters") {
-        const TotalBoosters = await interaction.guild.members.fetch().then(
+        const totalBoosters = await interaction.guild.members.fetch().then(
           (members) =>
             members
               .filter((m) => m.premiumSinceTimestamp)
@@ -20,7 +20,7 @@ module.exports = {
               .join("\n") || "❌Sorry, No Boosters Found from this server!"
         );
 
-        const TotalBoosterEmbed = new EmbedBuilder()
+        const totalBoosterEmbed = new EmbedBuilder()
           .setTitle(
             `All Server Boosters from ${
               interaction.guild.name
@@ -30,16 +30,16 @@ module.exports = {
                 (members) => members.filter((m) => m.premiumSinceTimestamp).size
               )}]`
           )
-          .setDescription(TotalBoosters)
-          .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
+          .setDescription(totalBoosters)
+          .setThumbnail(interaction.guild.iconURL({ size: 1024 }))
           .setColor(interaction.guild.members.me.displayHexColor)
           .setFooter({
             text: `Requested by ${interaction.user.username}`,
-            iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
+            iconURL: interaction.user.displayAvatarURL({ size: 1024 }),
           })
           .setTimestamp();
         await interaction.reply({
-          embeds: [TotalBoosterEmbed],
+          embeds: [totalBoosterEmbed],
           ephemeral: true,
         });
       }
