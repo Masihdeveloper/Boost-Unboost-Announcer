@@ -20,11 +20,11 @@ module.exports = {
   async execute(oldMember, newMember, client) {
     // All Definitions
 
-    const BoostAnnounceChannel = client.channels.cache.get(
+    const boostAnnounceChannel = client.channels.cache.get(
       config.boostChannelId
     );
 
-    const BoostAnnouceLogChannel = client.channels.cache.get(
+    const boostAnnouceLogChannel = client.channels.cache.get(
       config.boostLogChannelId
     );
 
@@ -35,9 +35,9 @@ module.exports = {
       3: "Level 3",
     };
 
-    const BoostLevel = format[newMember.guild.premiumTier];
+    const boostLevel = format[newMember.guild.premiumTier];
 
-    const TotalBoosterRow = new ActionRowBuilder().addComponents(
+    const totalBoosterRow = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
 
         .setLabel("Total Boosters")
@@ -57,7 +57,7 @@ module.exports = {
           newMember.guild.roles.premiumSubscriberRole.id
         )
       ) {
-        const BoostAnnounceEmbed = new EmbedBuilder()
+        const boostAnnounceEmbed = new EmbedBuilder()
           .setAuthor({
             name: `🎉🎉 BOOSTER PARTY 🎉🎉`,
             iconURL: newMember.guild.iconURL({ size: 1024 }),
@@ -67,7 +67,7 @@ module.exports = {
           )
           .addFields({
             name: "> 💎 Total Boost:",
-            value: `${newMember.guild.premiumSubscriptionCount} Boost | ${BoostLevel}`,
+            value: `${newMember.guild.premiumSubscriptionCount} Boost | ${boostLevel}`,
             inline: false,
           })
           .setImage(
@@ -76,10 +76,10 @@ module.exports = {
           .setColor("F47FFF")
           .setFooter({
             text: `${newMember.guild.name} Boost Detection System`,
-            iconURL: newMember.user.displayAvatarURL({ dynamic: true }),
+            iconURL: newMember.user.displayAvatarURL({ size: 1024 }),
           })
           .setTimestamp();
-        const BoostAnnounceRow = new ActionRowBuilder().addComponents(
+        const boostAnnounceRow = new ActionRowBuilder().addComponents(
           new ButtonBuilder()
 
             .setLabel("Total Boosters")
@@ -94,21 +94,21 @@ module.exports = {
             .setDisabled(true)
         );
 
-        const msg = await BoostAnnounceChannel.send({
+        const msg = await boostAnnounceChannel.send({
           content: `${newMember} \`<@${newMember.user.id}>\``,
-          embeds: [BoostAnnounceEmbed],
-          components: [BoostAnnounceRow],
+          embeds: [boostAnnounceEmbed],
+          components: [boostAnnounceRow],
         });
         msg.react("🎉");
 
         //Send DM to NEW Nitro Booster
         newMember.send({
           content: `Hello ${newMember.user.tag} You are Awesome, Thanks For Boost The **__${newMember.guild.name}__** Server\nSo Enjoy Your **${newMember.guild.roles.premiumSubscriberRole.name}** Role And Other Massive Perks🎉`,
-          components: [BoostAnnounceRow],
+          components: [boostAnnounceRow],
         });
 
         //Boost Announce Log System
-        const BoostLogEmbed = new EmbedBuilder()
+        const boostLogEmbed = new EmbedBuilder()
           .setAuthor({
             name: `NEW Boost Detection System`,
             iconURL: client.user.displayAvatarURL(),
@@ -145,7 +145,7 @@ module.exports = {
             },
             {
               name: "💜 Total Boost",
-              value: `${newMember.guild.premiumSubscriptionCount} Boost | ${BoostLevel}`,
+              value: `${newMember.guild.premiumSubscriptionCount} Boost | ${boostLevel}`,
               inline: false,
             },
             {
@@ -154,26 +154,20 @@ module.exports = {
               inline: false,
             }
           )
-          .setThumbnail(
-            `${newMember.user.displayAvatarURL({
-              size: 2048,
-              dynamic: true,
-              format: "png",
-            })}`
-          )
+          .setThumbnail(newMember.user.displayAvatarURL({ size: 1024 }))
           .setColor(newMember.guild.members.me.displayHexColor)
           .setFooter({
             text: `ID: ${newMember.user.id} (All Action Were Passed)`,
-            iconURL: newMember.guild.iconURL({ dynamic: true }),
+            iconURL: newMember.guild.iconURL({ size: 1024 }),
           })
           .setTimestamp();
-        const BoostLog = await BoostAnnounceChannel.send({
-          embeds: [BoostLogEmbed],
-          components: [TotalBoosterRow],
+        const boostLogMessage = await boostAnnounceChannel.send({
+          embeds: [boostLogEmbed],
+          components: [totalBoosterRow],
         });
 
         //Pin the Embed Message that send in Log channel
-        BoostLog.pin();
+        boostLogMessage.pin();
       }
     }
     //Trigger when Member Unboost the server and remove the Nitro Booster Role
@@ -183,7 +177,7 @@ module.exports = {
       ) &&
       !newMember.roles.cache.has(oldMember.guild.roles.premiumSubscriberRole.id)
     ) {
-      const UnboostEmbedLog = new EmbedBuilder()
+      const unboostEmbedLog = new EmbedBuilder()
         .setAuthor({
           name: `NEW UnBoost or Expired Detection System`,
           iconURL: client.user.displayAvatarURL(),
@@ -213,7 +207,7 @@ module.exports = {
 
           {
             name: "💜 Total Boost:",
-            value: `${oldMember.guild.premiumSubscriptionCount} Boost | ${BoostLevel}`,
+            value: `${oldMember.guild.premiumSubscriptionCount} Boost | ${boostLevel}`,
             inline: false,
           },
 
@@ -223,34 +217,24 @@ module.exports = {
             inline: false,
           }
         )
-        .setThumbnail(
-          `${oldMember.user.displayAvatarURL({
-            size: 2048,
-            dynamic: true,
-            format: "png",
-          })}`
-        )
+        .setThumbnail(oldMember.user.displayAvatarURL({ size: 1024 }))
         .setColor(oldMember.guild.members.me.displayHexColor)
         .setFooter({
           text: `ID: ${oldMember.user.id}`,
-          iconURL: `${oldMember.guild.iconURL({
-            size: 2048,
-            dynamic: true,
-            format: "png",
-          })}`,
+          iconURL: oldMember.guild.iconURL({ size: 1024 }),
         })
         .setTimestamp();
-      const Unboost = await BoostAnnouceLogChannel.send({
-        embeds: [UnboostEmbedLog],
-        components: [TotalBoosterRow],
+      const unboostLogMessage = await boostAnnouceLogChannel.send({
+        embeds: [unboostEmbedLog],
+        components: [totalBoosterRow],
       });
 
-      Unboost.pin();
+      unboostLogMessage.pin();
 
       //Send DM to NEW UnBooster
       oldMember.send({
         content: `> **Message Form Boost Detection System**\n\n> Hello ${oldMember.user.tag}, Unfortunately Your Nitro Boost For **__${oldMember.guild.name}__** Server Has Been Expired And You Lose Your Special And Cool Perks And Exclusive **${oldMember.guild.roles.premiumSubscriberRole.name}** Role :'(\n\n> 🎉By Boosting Again You Can Get This Perks Back!`,
-        components: [TotalBoosterRow],
+        components: [totalBoosterRow],
       });
     }
     //If you Follow and Star to my Repository you can remove this field!
