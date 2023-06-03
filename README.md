@@ -1,7 +1,7 @@
 Don't Forget to fill `boostChannelId` and `boostLogChannelId` by your information in the config.json file
 
 Install all required packages:
-
+.
 ```
 npm install
 ```
