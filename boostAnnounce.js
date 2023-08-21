@@ -1,8 +1,8 @@
 /* 
 Advanced Boost Announce System in Discord.js V14.8.0
-Hope you Enjoy, Made with 💜 by Masih#0258
-Github: https://github.com/Masihdev1 | Don't forget to ⭐
-Website: https://masihdev.tk/
+Hope you Enjoy, Made with 🤍 by Masih#0258
+Github: https://github.com/Masihdeveloper | Don't forget to ⭐
+Website: https://masihdev.ir/
 Copyright Masih 2024 All Right Reserved!
 */
 
@@ -239,7 +239,7 @@ module.exports = {
     }
     //If you Follow and Star to my Repository you can remove this field!
     console.log(
-      `Github: https://github.com/Masihdev1, Don't Forget to ⭐\nWebsite: https://masihdev.tk/`
+      `Github: https://github.com/Masihdeveloper, Don't Forget to ⭐\nWebsite: https://masihdev.ir/`
     );
   },
 };
