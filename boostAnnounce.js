@@ -24,7 +24,7 @@ module.exports = {
       config.boostChannelId
     );
 
-    const boostAnnouceLogChannel = client.channels.cache.get(
+    const boostAnnounceLogChannel = client.channels.cache.get(
       config.boostLogChannelId
     );
 
@@ -63,7 +63,7 @@ module.exports = {
             iconURL: newMember.guild.iconURL({ size: 1024 }),
           })
           .setDescription(
-            `> <@${newMember.user.id}>, You Are Awsome And Amazing.\n\n> Thanks For Boost The Server\n> Enjoy Your ${newMember.guild.roles.premiumSubscriberRole} and Other Exclusive Perks!`
+            `> <@${newMember.user.id}>, You are Awesome And Amazing.\n\n> Thanks for Boost the Server\n> Enjoy your ${newMember.guild.roles.premiumSubscriberRole} and other Exclusive Perks!`
           )
           .addFields({
             name: "> 💎 Total Boost:",
@@ -101,13 +101,13 @@ module.exports = {
         });
         msg.react("🎉");
 
-        //Send DM to NEW Nitro Booster
+        // Send DM to NEW Nitro Booster
         newMember.send({
           content: `Hello ${newMember.user.tag} You are Awesome, Thanks For Boost The **__${newMember.guild.name}__** Server\nSo Enjoy Your **${newMember.guild.roles.premiumSubscriberRole.name}** Role And Other Massive Perks🎉`,
           components: [boostAnnounceRow],
         });
 
-        //Boost Announce Log System
+        // Boost Announce Log System
         const boostLogEmbed = new EmbedBuilder()
           .setAuthor({
             name: `NEW Boost Detection System`,
@@ -166,11 +166,11 @@ module.exports = {
           components: [totalBoosterRow],
         });
 
-        //Pin the Embed Message that send in Log channel
+        // Pin the Embed Message that send in Log channel
         boostLogMessage.pin();
       }
     }
-    //Trigger when Member Unboost the server and remove the Nitro Booster Role
+    // Trigger when Member Unboost the server and remove the Nitro Booster Role
     if (
       oldMember.roles.cache.has(
         oldMember.guild.roles.premiumSubscriberRole.id
@@ -224,22 +224,22 @@ module.exports = {
           iconURL: oldMember.guild.iconURL({ size: 1024 }),
         })
         .setTimestamp();
-      const unboostLogMessage = await boostAnnouceLogChannel.send({
+      const unboostLogMessage = await boostAnnounceLogChannel.send({
         embeds: [unboostEmbedLog],
         components: [totalBoosterRow],
       });
 
       unboostLogMessage.pin();
 
-      //Send DM to NEW UnBooster
+      // Send DM to NEW UnBooster
       oldMember.send({
         content: `> **Message Form Boost Detection System**\n\n> Hello ${oldMember.user.tag}, Unfortunately Your Nitro Boost For **__${oldMember.guild.name}__** Server Has Been Expired And You Lose Your Special And Cool Perks And Exclusive **${oldMember.guild.roles.premiumSubscriberRole.name}** Role :'(\n\n> 🎉By Boosting Again You Can Get This Perks Back!`,
         components: [totalBoosterRow],
       });
     }
-    //If you Follow and Star to my Repository you can remove this field!
+    // If you Follow and Star to my Repository you can remove this field!
     console.log(
-      `Github: https://github.com/Masihdeveloper, Don't Forget to ⭐\nWebsite: https://masihdev.ir/`
+      `Github: https://github.com/Masihdeveloper, Don't Forget to ⭐\nWebsite: https://masihdev.ir`
     );
   },
 };
