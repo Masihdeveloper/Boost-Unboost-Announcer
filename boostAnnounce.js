@@ -1,5 +1,5 @@
 /* 
-Advanced Boost Announce System in Discord.js V14.8.0
+Advanced Boost Announce System in Discord.js V14.12.0
 Hope you Enjoy, Made with 🤍 by Masih#0258
 Github: https://github.com/Masihdeveloper | Don't forget to ⭐
 Website: https://masihdev.ir/
