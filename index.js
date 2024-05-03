@@ -14,6 +14,7 @@ const {
   ButtonBuilder,
   ButtonStyle,
 } = require("discord.js");
+const chalk = require("chalk");
 const config = require("./config.json");
 
 const client = new Client({
@@ -117,7 +118,9 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
       })
       .catch((err) => {
         console.error(
-          `An error ocurred while sending DM to new booster:\n-> ${err}`
+          `An error ocurred while sending DM to new booster:\n-> ${chalk.red(
+            err
+          )}`
         );
       });
 
@@ -201,7 +204,9 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
       })
       .catch((err) => {
         console.error(
-          `An error ocurred while sending DM to the member who has unboost the server:\n-> ${err}`
+          `An error ocurred while sending DM to the member who has unboost the server:\n-> ${chalk.red(
+            err
+          )}`
         );
       });
     // Unboost Log System
@@ -311,7 +316,15 @@ client.on("interactionCreate", async (interaction) => {
 // Emitted when the client/bot become to online
 client.on("ready", () => {
   console.log(
-    `Successfully logged in as ${client.user.tag}\nGitHub Repository: https://github.com/Masihdeveloper/Boost-Unboost-Announcer (If was useful please don't forget to star⭐)\nWebsite: https://masihdev.ir`
+    chalk.green(`Successfully logged in as ${chalk.bold(client.user.tag)}`),
+    chalk.bold("\nGitHub Repository:"),
+    chalk.blueBright(
+      "https://github.com/Masihdeveloper/Boost-Unboost-Announcer"
+    ),
+    "- If is useful please don't forget to",
+    chalk.yellowBright("star⭐"),
+    chalk.bold("\nWebsite:"),
+    chalk.blueBright("https://masihdev.ir")
   );
 });
 // Logs in to your client by it's token
