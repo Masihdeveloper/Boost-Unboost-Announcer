@@ -30,7 +30,7 @@ node index.js
 
 Hope enjoy and if you like it, Don't forget to give the star⭐ to this repository and follow me for more special open source project.
 
- > Made with 🤍 by [`Masihdeveloper`](https://discord.com/users/901765485341859911)
+ > Made with 🤍 by [`Masihdeveloper`](https://discord.com/users/901765485341859911) in JavaScript.
 
 
 
