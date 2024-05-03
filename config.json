@@ -1,4 +1,5 @@
 {
-  "boostChannelId": "YOUR BOOST CHANNEL ID",
-  "boostLogChannelId": "YOUR BOOST LOG CHANNEL ID"
+  "botToken": "Enter your bot token",
+  "boostAnnounceChannelId": "Enter the channel ID for sending boost announcements",
+  "boostLogChannelId": "Enter the channel ID for sending boost & unboost logs"
 }
