@@ -19,7 +19,8 @@ node index.js
 
 - DM to the new nitro members
 
-![Untitled design (2)](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/e79177cb-1664-4226-bc8e-aab6773c02bc)
+![Untitled design (3)](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/553296a7-7ddb-4c44-9344-8d0dac44f5c3)
+
 
 
 
