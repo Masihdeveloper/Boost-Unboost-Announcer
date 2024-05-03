@@ -15,22 +15,22 @@ node index.js
 
 1. Sends Boost Announcer message to a channel with button and reaction emoji.
 
-![Screenshot 2024-05-03 180238](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/9706bdc4-4dc3-4271-9048-884cd0990b78)
+![Boost Announcer](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/9706bdc4-4dc3-4271-9048-884cd0990b78)
 #
 2. Sends **two** different messages immediately to DM of the member who either boosted or unboosted the server.
 
-- ![Screenshot 2024-05-03 180750](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/c3885f5a-ea47-4f5c-ba26-12b4b596bd55)
-![Screenshot 2024-05-03 235648](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/7da48722-abb9-48db-abcb-6e451a71a4fe)
+- ![Boost DM](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/c3885f5a-ea47-4f5c-ba26-12b4b596bd55)
+![UnBoost DM](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/7da48722-abb9-48db-abcb-6e451a71a4fe)
 #
-3. Provides a comprehensive moderation audit log for both them.
+3. Provides a comprehensive moderation audit logs for both of them.
 
-- ![Screenshot 2024-05-04 004127](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/2eca58bd-8944-4616-a24c-f03f740b7f86)
-![Screenshot 2024-05-03 180945](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/4210e9f8-46b1-410f-8072-9ba33caaee8a)
+- ![Boost Logs](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/2eca58bd-8944-4616-a24c-f03f740b7f86)
+![UnBoost Logs](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/4210e9f8-46b1-410f-8072-9ba33caaee8a)
 #
 
 Hope enjoy and if you like it, Don't forget to give the star⭐ to this repository and follow me for more special open source project.
 
- > Made with 🤍 by [`Masihdeveloper`](https://discord.com/users/901765485341859911) in JavaScript.
+> Made with 🤍 by [`Masihdeveloper`](https://discord.com/users/901765485341859911) in JavaScript.
 
 
 
