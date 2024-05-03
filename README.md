@@ -11,7 +11,7 @@ npm install
 ```
 node index.js
 ```
-## 📸 Preview Images <span style="font-size: 10px">hello</span>
+## 📸 Preview Images <span style="font-size: 1px">hello</span>
 
 - Send Boost Announcer to a channel
 
