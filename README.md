@@ -6,7 +6,7 @@
 ``` 
 npm install
 ```
-4. Don't forget the fillout the `botToken`, `boostAnnounceChannelId` and `boostLogsChannelId` in [`config.json`](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/blob/main/config.json) file by your real information! 
+4. Don't forget to fillout the `botToken`, `boostAnnounceChannelId` and `boostLogsChannelId` in [`config.json`](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/blob/main/config.json) file by your real information! 
 5. Run your application with sending this command in Terminal:
 ```
 node index.js
