@@ -11,10 +11,13 @@ npm install
 ```
 node index.js
 ```
-<h2>📸 Preview <span style="font-size: 2px !important;">Images</span></h2>
+## 📸 Preview Images
 
 - Send Boost Announcer to a channel
 
 ![Screenshot 2024-05-03 180238](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/9706bdc4-4dc3-4271-9048-884cd0990b78)
 
--
+- DM to the new nitro members
+
+![Screenshot 2024-05-03 180750](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/9e2a1afd-82db-49fb-a8c1-ffeed1b84ffa)
+
