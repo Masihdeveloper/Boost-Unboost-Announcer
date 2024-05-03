@@ -1,4 +1,4 @@
-# <img src="https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/9ee3e394-d44b-4445-9514-a7396b8f4fc3" width: 30px> Boost and Unboost Announcer Discord Bot
+# <img src="https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/9ee3e394-d44b-4445-9514-a7396b8f4fc3" width="30px"> Boost and Unboost Announcer Discord Bot
 
 Install all required packages:
 
