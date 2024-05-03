@@ -6,4 +6,4 @@
 ``` 
 npm install
 ```
-4. Don't forget the fillout the `botToken`, `boostAnnounceChannelId` and `BoostLogsChannelId` in `config.json` file! 
+4. Don't forget the fillout the `botToken`, `boostAnnounceChannelId` and `BoostLogsChannelId` in [`config.json`](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/blob/main/config.json) file! 
