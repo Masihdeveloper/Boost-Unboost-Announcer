@@ -25,7 +25,7 @@ node index.js
 3. Logging info
 
 ![Screenshot 2024-05-04 004127](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/2eca58bd-8944-4616-a24c-f03f740b7f86)
-![Screenshot 2024-05-03 180945](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/c03280fc-fea4-4a2d-ba38-d9d34f97f55e)
+![Screenshot 2024-05-03 180945](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/310b6556-a236-4779-93b1-d7567e93b742)
 
 
 
