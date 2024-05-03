@@ -21,6 +21,11 @@ node index.js
 
 ![Untitled design (3)](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/553296a7-7ddb-4c44-9344-8d0dac44f5c3)
 
+- Logging info
+  
+![Untitled design (1)](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/fa7bbe86-64fd-4e91-bf73-2defb6f06ce7)
+
+
 
 
 
