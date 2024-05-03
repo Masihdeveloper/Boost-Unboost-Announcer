@@ -1,5 +1,5 @@
 {
   "botToken": "Enter your bot token",
   "boostAnnounceChannelId": "Enter the channel ID for sending boost announcements",
-  "boostLogChannelId": "Enter the channel ID for sending boost & unboost logs"
+  "boostLogsChannelId": "Enter the channel ID for sending boost & unboost logs"
 }
