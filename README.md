@@ -29,7 +29,8 @@ node index.js
 #
 
 Hope enjoyed and if you like this project, Don't forget to give star⭐ to this repository
-Made with 🤍 by [`Masihdeveloper`](https://discord.com/users/901765485341859911)
+
+ > Made with 🤍 by [`Masihdeveloper`](https://discord.com/users/901765485341859911)
 
 
 
