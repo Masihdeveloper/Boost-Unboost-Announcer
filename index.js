@@ -27,7 +27,7 @@ const client = new Client({
 client.on("guildMemberUpdate", async (oldMember, newMember) => {
   // All Definitions
   const boostAnnounceLogChannel = client.channels.cache.get(
-    config.boostLogChannelId
+    config.boostLogsChannelId
   );
   const boostAnnounceChannel = client.channels.cache.get(
     config.boostAnnounceChannelId
