@@ -28,7 +28,7 @@ node index.js
 ![UnBoost Logs](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/4210e9f8-46b1-410f-8072-9ba33caaee8a)
 #
 
-Hope enjoy and if you like it, Don't forget to give the **star⭐** to this repository and follow me for more special open source project!
+Hope enjoy and if you like it, Don't forget to give the **star⭐** to this repository and please follow me for more special open source projects!
 
 > Made with 🤍 by [`Masihdeveloper`](https://discord.com/users/901765485341859911) in JavaScript.
 
