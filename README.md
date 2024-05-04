@@ -13,7 +13,7 @@ node index.js
 ```
 ## 📸 Preview Images
 
-1. Sends Boost Announcer message to a channel with button and reaction emoji.
+1. Sends Boost Announce message to a channel with button and reaction emoji.
 
 ![Boost Announcer](https://github.com/Masihdeveloper/Boost-Unboost-Announcer/assets/100484009/9706bdc4-4dc3-4271-9048-884cd0990b78)
 #
