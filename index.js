@@ -78,8 +78,8 @@ client.on("guildMemberUpdate", async (oldMember, newMember) => {
     const boostAnnounceRow = new ActionRowBuilder().addComponents(
       totalBoosterRow.components[0],
       new ButtonBuilder()
-        .setLabel(`${newMember.user.username}`)
-        .setEmoji("899583101796253706")
+        .setLabel(newMember.user.username)
+        .setEmoji("1301252005700042792")
         .setCustomId("Disabled")
         .setStyle(ButtonStyle.Danger)
         .setDisabled(true)
